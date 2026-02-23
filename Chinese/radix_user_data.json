@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "favourites_list": [
+    "示",
+    "攵",
+    "臼",
+    "貝",
+    "田",
+    "目",
+    "宀",
+    "⺼",
+    "广",
+    "夂",
+    "艮",
+    "豕",
+    "廾",
+    "殳",
+    "习",
+    "帀",
+    "敫",
+    "疋",
+    "蜀",
+    "隹"
+  ],
+  "prompt_config": {
+    "version": 2,
+    "preamble": "You are a bilingual Chinese dictionary editor and teacher.\n\nExplain a single Chinese character in depth for language learners. Prioritise modern Mandarin usage.\n\nAccuracy rules:\n- Do not fabricate etymology. If you are unsure, say so explicitly.\n- If the character is rare/archaic, present the most widely used modern equivalent and clearly label it as an equivalent.\n- Use concise, learner-friendly explanations. Avoid heavy jargon; define any necessary terms.\n\n⸻\n\n",
+    "epilogue": "Hanzi: {char}\nEnglish definition: {def_en}\n",
+    "tasks": [
+      {
+        "id": "task1",
+        "title": "Task 1 — Character Deep Dive (Longform)",
+        "template": "Task 1 — Character Deep Dive (Longform)\n\nProduce a comprehensive, teaching-quality explanation of ONE Chinese character.\nThis is a longform deep dive. Prioritise modern Mandarin; do not invent etymology.\n\nOutput:\n\n1) Modern Meaning & Usage Scope\n- Core meaning(s)\n- Register (everyday / formal / literary)\n- Typical contexts of use\n\n2) Structure & Formation\n- Decomposition into nameable components. Show pinyin for all chinese characters\n- Character type (形声 / 会意 / pictograph / other)\n- What each component contributes (meaning, sound, or visual only)\n\n3) Etymology (only if confident)\n- Earliest form and original idea (2–4 lines)\n- If uncertain: state clearly\n\n4) Semantic Development\n- How the original idea led to modern meanings\n\n5) Compounds & Productivity\n- Why the character is productive in compounds\n- What semantic role it usually plays\n\n6) High-Value Vocabulary (5 items)\n- Hanzi, pinyin, natural English meaning\n\n7) Example Sentences (2)\n- Simplified + Traditional (if different)\n- English translation\n- Full pinyin\n\n8) Learner Pitfalls\n- Common confusions or misleading dictionary glosses\n\n⸻\n"
+      },
+      {
+        "id": "task2",
+        "title": "Task 2 — Quick Drill (Fast Practice)",
+        "template": "Task 2 — Quick Drill (Fast Practice)\n\nCreate fast, practice-oriented material for the selected character.\nThis task should be short and drill-focused.\n\nOutput:\n\n1) One-line meaning reminder (<= 12 words)\n\n2) Fill-in-the-blank (2 items)\n- Sentence with blank\n- Correct answer shown after each item\n\n3) Minimal pair / contrast choice (1 item)\n- Two similar characters; learner must choose the correct one\n- Brief explanation (<= 20 words)\n\n4) One production prompt\n- Ask the learner to write ONE sentence using the character\n- Give a usage hint (register or collocation)\n\n⸻\n"
+      },
+      {
+        "id": "task3",
+        "title": "Task 3 — Conceptual Contrast (Near-Synonyms)",
+        "template": "Task 3 — Conceptual Contrast (Near-Synonyms)\n\nCompare the target character’s meaning/usage with 2–3 other characters that learners commonly confuse with it (include pinyin with tone marks).\nDo not assume any prior tasks have been run.\n\nOutput:\n\n1) One-line core distinction\n- Summarise how modern Mandarin “divides the concept” across these characters.\n\n2) Comparison table (compact)\nFor each character include:\n- Character + pinyin\n- Core meaning (modern)\n- Typical collocations / domains (2–4 items)\n- Register note (everyday/formal/literary)\n\n3) Learner guidance (max 5 bullets)\n- Subtle usage differences (collocation constraints, tone, formality, pragmatics).\n- Include at least one “choose X when…” rule and one “avoid X in…” warning.\n\n4) Mini examples (optional; max 3)\n- Only if they clarify a common confusion; keep each <= 12 words.\n\n⸻\n\n"
+      },
+      {
+        "id": "task4",
+        "title": "Task 4 — Verify Logic & Patterns Analysis with AI (From App Fields)",
+        "template": "Task 4 — Verify Logic & Patterns Analysis with AI (From App Fields)\n\nYou are a Chinese character structure tutor. Explain Radix’s “Character Logic & Patterns” panel clearly and conservatively.\nDo not invent etymology; if uncertain, say so. Do not assume any prior tasks have been run.\n\nINPUT (fields provided by the app):\n- char: {char}\n- def_en: {def_en}\n- decomposition: {decomposition}\n- semantic: {semantic}\n- phonetic: {phonetic}\n- phonetic_pinyin: {phonetic_pinyin}\n- is_sound_match: {is_sound_match}\n- pronunciation_family: {pronunciation_family}\n- semantic_family: {semantic_family}\n\nTASK:\nExplain (1) why semantic vs phonetic were assigned, and (2) what the two families mean,\nINCLUDING checking for false friends in pronunciation_family (e.g., visual matches caused by simplification).\n\nOUTPUT:\n\n1) Component Roles\n- If semantic exists: what meaning cue it suggests (1–2 lines).\n- If phonetic exists: what sound cue it suggests (1–2 lines).\n- Interpret is_sound_match:\n  - True: strong phonetic cue in modern Mandarin.\n  - False: candidate phonetic component but modern sound mismatch; give 1–2 plausible reasons only if confident.\n\n2) Pronunciation Family (share {phonetic})\nFor each character in pronunciation_family, output ONE line:\n- Character: Classification (Likely true member / Visual only / Simplification artefact / Uncertain) — reason (<= 15 words).\nThen add ONE summary sentence: label as “Sound family” or safer “Component family.”\n\n3) Meaning Family (share {semantic})\n- 1–2 sentence theme of what {semantic} often signals in modern characters.\n- For each character in semantic_family: one short line on how the theme plausibly applies (no overclaiming).\n\n4) Learner Takeaway (max 2 bullets)\n- One rule-of-thumb about radicals (meaning cues).\n- One rule-of-thumb about phonetics (sound cues + why false friends occur).\n\n5) UI Tooltip Copy\n- Tooltip for “Meaning (Radical)” (<= 18 words)\n- Tooltip for “Sound Match / Sound Component” (<= 18 words)\n\n⸻\n\n"
+      },
+      {
+        "id": "task5",
+        "title": "Task 5 — Radix UI Blocks (Panel Copy)",
+        "template": "Task 5 — Radix UI Blocks (Panel Copy)\n\nProduce copy that can be placed directly into Radix UI panels for the single character below.\nDo not assume any prior tasks have been run. Prioritise modern Mandarin usage. Do not invent etymology.\n\nOutput exactly these blocks:\n\n1) Header microcopy (<= 2 lines)\n- One-line meaning anchor + one-line usage note (everyday/formal/literary-leaning).\n\n2) “Character Logic & Patterns” panel\na) Meaning (Radical)\n   - Component: ___\n   - Meaning cue: ___ (<= 14 words)\n   - Confidence: high / medium / low\n\nb) Sound (Phonetic)\n   - Component: ___\n   - Sound cue: ___ (<= 14 words)\n   - Reliability: high / partial / historical / visual only\n\nc) One-sentence learner takeaway (<= 18 words)\n\n3) Families chips (for UI lists)\na) Sound family (max 8 characters)\n   - Only include if the phonetic relationship is defensible; otherwise output: “None (no reliable sound family).”\n\nb) Meaning family (max 8 characters)\n   - High-frequency, modern-use characters preferred.\n\n4) Tooltip pack (UI-ready)\n- Tooltip: “Meaning (Radical)” (<= 18 words)\n- Tooltip: “Sound Component” (<= 18 words)\n- Tooltip: “Sound Match” (<= 18 words)\n- Tooltip: “Family” (<= 18 words)\n\n⸻\n\n"
+      },
+      {
+        "id": "task6",
+        "title": "Task 6 — Collocation & Pattern Explorer",
+        "template": "Task 6 — Collocation & Pattern Explorer\n\nHelp learners internalise how the selected character behaves in real language.\n\nOutput:\n\n1) Common collocation patterns (3–5)\n- Pattern format (e.g. X + Character, Character + Y)\n- Example word or phrase\n- Usage note\n\n2) What sounds unnatural\n- 2 examples of incorrect or unlikely usage\n- Short explanation why\n\n3) Register sensitivity\n- How usage changes (or not) across everyday, formal, and written contexts\n\n⸻\n"
+      },
+      {
+        "id": "task7",
+        "title": "Task 7 — Memory & Recall Trainer",
+        "template": "Task 7 — Memory & Recall Trainer\n\nDesign memory aids that reinforce long-term recall without false etymology.\n\nOutput:\n\n1) Visual memory hook\n- One vivid image tied to structure or meaning\n\n2) Sound hook (if applicable)\n- Pronunciation cue or rhyme (only if reliable)\n\n3) Recall check\n- 3 short questions testing meaning, usage, or structure\n- Provide answers after the questions\n\n⸻\n"
+      },
+      {
+        "id": "task8",
+        "title": "Task 8 — Sentence Expansion Ladder",
+        "template": "Task 8 — Sentence Expansion Ladder\n\nGuide learners from simple to advanced usage of the same character.\n\nOutput:\n\n- Level 1: very simple sentence (spoken)\n- Level 2: neutral everyday sentence\n- Level 3: longer descriptive sentence\n- Level 4: formal or written-style sentence\n\nFor each:\n- Hanzi\n- Pinyin\n- English translation\n\n⸻\n"
+      },
+      {
+        "id": "task9",
+        "title": "Task 9 — Cross-Language Insight (CN–EN)",
+        "template": "Task 9 — Cross-Language Insight (CN–EN)\n\nHelp bilingual learners avoid translation traps.\n\nOutput:\n\n1) Why the English gloss is imperfect\n- What the English definition misses or distorts\n\n2) Better mental model in English\n- One sentence explaining how to think about this character conceptually\n\n3) Common mistranslations\n- 2 examples\n- Correct interpretation\n\n⸻\n"
+      },
+      {
+        "id": "task10",
+        "title": "Task 10 — Creative Application",
+        "template": "Task 10 — Creative Application\n\nEncourage active, creative use of the selected character.\n\nOutput (choose ONE angle only):\n\n- Micro-story (<= 60 words) using the character naturally\nOR\n- Short dialogue (3–4 lines) where the character appears meaningfully\nOR\n- Reflective prompt asking the learner to relate the character to a personal experience\n\nNote: Natural usage matters more than literary flair.\n\n⸻\n"
+      }
+    ]
+  },
+  "prompt_ui": {
+    "default_selected_task_ids": [
+      "task1",
+      "task2",
+      "task3",
+      "task4",
+      "task5",
+      "task6",
+      "task7",
+      "task8",
+      "task9",
+      "task10"
+    ]
+  }
+}
