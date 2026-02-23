@@ -1,0 +1,26 @@
+[theme]
+base="light"
+primaryColor="#008080"
+backgroundColor="#F9FAFB"
+secondaryBackgroundColor="#FFFFFF"
+textColor="#111827"
+
+
+[server]
+# Increase session timeout (in seconds)
+# Default is 300 seconds (5 minutes)
+maxUploadSize = 200
+enableXsrfProtection = true
+enableCORS = false
+
+# Key setting - increase timeout
+runOnSave = true
+fileWatcherType = "auto"
+
+[browser]
+# Disable automatic tab timeout
+gatherUsageStats = false
+
+# Prevent session from timing out
+serverAddress = "localhost"
+serverPort = 8501
