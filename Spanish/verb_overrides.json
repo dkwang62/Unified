@@ -1,0 +1,56 @@
+{
+  "lavar": {
+    "is_pronominal": true,
+    "pronominal_infinitive": "lavarse",
+    "se_type": "reflexive",
+    "meaning_shift": "subject washes self"
+  },
+  "ir": {
+    "is_pronominal": true,
+    "pronominal_infinitive": "irse",
+    "se_type": "pronominal",
+    "meaning_shift": "departure / leaving"
+  },
+  "dormir": {
+    "is_pronominal": true,
+    "pronominal_infinitive": "dormirse",
+    "se_type": "pronominal",
+    "meaning_shift": "fall asleep"
+  },
+  "poner": {
+    "is_pronominal": true,
+    "pronominal_infinitive": "ponerse",
+    "se_type": "pronominal",
+    "meaning_shift": "become / put on (clothes)"
+  },
+  "quedar": {
+    "is_pronominal": true,
+    "pronominal_infinitive": "quedarse",
+    "se_type": "pronominal",
+    "meaning_shift": "remain / stay"
+  },
+  "llevar": {
+    "is_pronominal": true,
+    "pronominal_infinitive": "llevarse",
+    "se_type": "pronominal",
+    "meaning_shift": "take away"
+  },
+  "volver": {
+    "is_pronominal": true,
+    "pronominal_infinitive": "volverse",
+    "se_type": "pronominal",
+    "meaning_shift": "become (permanent change)"
+  },
+  "sentir": {
+    "is_pronominal": true,
+    "pronominal_infinitive": "sentirse",
+    "se_type": "pronominal",
+    "meaning_shift": "feel (emotional/physical state)"
+  },
+  "dar": {
+    "is_pronominal": true,
+    "pronominal_infinitive": "darse cuenta",
+    "se_type": "pronominal_phrase",
+    "meaning_shift": "realize"
+  }
+}

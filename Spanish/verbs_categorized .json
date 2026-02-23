@@ -1,0 +1,580 @@
+{
+  "verb_taxonomy": {
+    "reflexive": {
+      "definition": "The subject performs the action on themselves (self-directed).",
+      "categories": {
+        "daily_routine": {
+          "verbs": {
+            "despertar": "despertarse",
+            "levantar": "levantarse",
+            "acostar": "acostarse",
+            "lavar": "lavarse",
+            "duchar": "ducharse",
+            "bañar": "bañarse",
+            "vestir": "vestirse",
+            "desvestir": "desvestirse",
+            "afeitar": "afeitarse",
+            "peinar": "peinarse",
+            "maquillar": "maquillarse",
+            "secar": "secarse",
+            "cepillar": "cepillarse",
+            "arreglar": "arreglarse",
+            "preparar": "prepararse",
+            "pintar": "pintarse",
+            "broncear": "broncearse"
+          }
+        },
+        "movement_position": {
+          "verbs": {
+            "sentar": "sentarse",
+            "parar": "pararse",
+            "tumbar": "tumbarse",
+            "agachar": "agacharse",
+            "inclinar": "inclinarse",
+            "acercar": "acercarse",
+            "alejar": "alejarse",
+            "esconder": "esconderse",
+            "mirar": "mirarse",
+            "detener": "detenerse",
+            "mover": "moverse",
+            "zambullir": "zambullirse",
+            "echar": "echarse"
+          }
+        },
+        "mental_emotional": {
+          "verbs": {
+            "calmar": "calmarse",
+            "concentrar": "concentrarse",
+            "relajar": "relajarse",
+            "animar": "animarse",
+            "motivar": "motivarse",
+            "tranquilizar": "tranquilizarse",
+            "acostumbrar": "acostumbrarse",
+            "adaptar": "adaptarse",
+            "aburrir": "aburrirse",
+            "divertir": "divertirse",
+            "preocupar": "preocuparse",
+            "alegrar": "alegrarse",
+            "asustar": "asustarse",
+            "enamorar": "enamorarse",
+            "enfadar": "enfadarse",
+            "enojar": "enojarse",
+            "entusiasmar": "entusiasmarse",
+            "sentir": "sentirse",
+            "cansar": "cansarse"
+          }
+        }
+      }
+    },
+    "pronominal": {
+      "definition": "The 'se' form behaves like a different lexical verb (meaning shift).",
+      "categories": {
+        "change_of_state": {
+          "verbs": {
+            "hacer": "hacerse",
+            "poner": "ponerse",
+            "volver": "volverse",
+            "quedar": "quedarse",
+            "convertir": "convertirse",
+            "transformar": "transformarse",
+            "calentar": "calentarse",
+            "emborrachar": "emborracharse",
+            "enfermar": "enfermarse",
+            "enflaquecer": "enflaquecerse",
+            "enriquecer": "enriquecerse",
+            "envejecer": "envejecerse",
+            "criar": "criarse",
+            "desarrollar": "desarrollarse"
+          }
+        },
+        "social_life_events": {
+          "verbs": {
+            "casar": "casarse",
+            "divorciar": "divorciarse",
+            "graduar": "graduarse",
+            "matricular": "matricularse",
+            "comunicar": "comunicarse",
+            "juntar": "juntarse",
+            "registrar": "registrarse"
+          }
+        },
+        "mental_process": {
+          "verbs": {
+            "acordar": "acordarse",
+            "enterar": "enterarse",
+            "equivocar": "equivocarse",
+            "olvidar": "olvidarse",
+            "preguntar": "preguntarse",
+            "fijar": "fijarse"
+          }
+        },
+        "attitude_behavior": {
+          "verbs": {
+            "arrepentir": "arrepentirse",
+            "burlar": "burlarse",
+            "jactar": "jactarse",
+            "quejar": "quejarse",
+            "atrever": "atreverse",
+            "negar": "negarse",
+            "decidir": "decidirse",
+            "dedicar": "dedicarse",
+            "oponer": "oponerse",
+            "empeñar": "empeñarse",
+            "esforzar": "esforzarse",
+            "arriesgar": "arriesgarse"
+          }
+        },
+        "departure": {
+          "verbs": {
+            "ir": "irse",
+            "marchar": "marcharse",
+            "salir": "salirse",
+            "escapar": "escaparse",
+            "largar": "largarse",
+            "retirar": "retirarse",
+            "mudar": "mudarse"
+          }
+        },
+        "identity_description": {
+          "verbs": {
+            "llamar": "llamarse",
+            "apellidar": "apellidarse",
+            "parecer": "parecerse",
+            "hallar": "hallarse",
+            "encontrar": "encontrarse"
+          }
+        },
+        "personal_involvement": {
+          "verbs": {
+            "llevar": "llevarse",
+            "comer": "comerse",
+            "beber": "beberse",
+            "saber": "saberse",
+            "creer": "creerse",
+            "jugar": "jugarse",
+            "ganar": "ganarse",
+            "abonar": "abonarse",
+            "callar": "callarse"
+          }
+        }
+      }
+    },
+    "accidental_dative": {
+      "definition": "Unintended event affecting someone (se me cayó).",
+      "required_clitics": ["me", "te", "le", "nos", "os", "les"],
+      "categories": {
+        "dropping_falling": {
+          "verbs": { "caer": "caerse" }
+        },
+        "forgetting": {
+          "verbs": { "olvidar": "olvidarse" }
+        },
+        "losing": {
+          "verbs": { "perder": "perderse", "extraviar": "extraviarse" }
+        },
+        "breaking_damage": {
+          "verbs": { 
+            "romper": "romperse",
+            "quebrar": "quebrarse",
+            "estropear": "estropearse" 
+          }
+        },
+        "burning_spoiling": {
+          "verbs": { 
+            "quemar": "quemarse",
+            "arruinar": "arruinarse"
+          }
+        },
+        "running_out": {
+          "verbs": { 
+            "acabar": "acabarse",
+            "terminar": "terminarse"
+          }
+        }
+      }
+    },
+    "experiencer": {
+      "definition": "Verbs using the indirect object structure: IO (Experiencer) + Verb + Subject.",
+      "required_clitics": ["me", "te", "le", "nos", "os", "les"],
+      "categories": {
+        "liking_preference": {
+          "verbs": {
+            "gustar": "gustar",
+            "encantar": "encantar",
+            "agradar": "agradar",
+            "desagradar": "desagradar",
+            "fascinar": "fascinar",
+            "atraer": "atraer",
+            "cautivar": "cautivar",
+            "interesar": "interesar",
+            "molar": "molar",
+            "chiflar": "chiflar"
+          }
+        },
+        "annoyance_irritation": {
+          "verbs": {
+            "molestar": "molestar",
+            "irritar": "irritar",
+            "fastidiar": "fastidiar",
+            "incomodar": "incomodar",
+            "disgustar": "disgustar",
+            "ofender": "ofender",
+            "aburrir": "aburrir",
+            "cansar": "cansar"
+          }
+        },
+        "emotional_impact": {
+          "verbs": {
+            "sorprender": "sorprender",
+            "asombrar": "asombrar",
+            "impresionar": "impresionar",
+            "asustar": "asustar",
+            "preocupar": "preocupar",
+            "alegrar": "alegrar",
+            "entristecer": "entristecer",
+            "divertir": "divertir",
+            "extrañar": "extrañar"
+          }
+        },
+        "physical_sensation": {
+          "verbs": {
+            "doler": "doler",
+            "picar": "picar",
+            "escocer": "escocer"
+          }
+        },
+        "importance_convenience": {
+          "verbs": {
+            "importar": "importar",
+            "convenir": "convenir",
+            "servir": "servir",
+            "valer": "valer",
+            "bastar": "bastar",
+            "sobrar": "sobrar",
+            "faltar": "faltar",
+            "parecer": "parecer",
+            "costar": "costar",
+            "tocar": "tocar"
+          }
+        }
+      }
+    }
+  },
+  "reference_guide": {
+    "title": "REFLEXIVE_SEED vs PRONOMINAL_SEED",
+    "summary": "Both lists contain verbs commonly used with 'se', but for different reasons: reflexive (self-directed actions) vs pronominal/lexical (meaning-shifting or fixed 'se' usage).",
+    "sections": [
+      {
+        "heading": "REFLEXIVE_SEED (mostly literal reflexive / routine actions)",
+        "points": [
+          "‘se’ usually means the subject performs the action on themselves (self-directed object).",
+          "Meaning stays close to the base verb; the difference is mainly ‘to oneself’.",
+          "Often used for daily routines (wake up, shower, dress, etc.).",
+          "The base verb can usually still be used transitively with an object."
+        ],
+        "examples": [
+          {
+            "base": "lavar",
+            "with_se": "lavarse",
+            "base_meaning_en": "to wash (something)",
+            "se_meaning_en": "to wash oneself"
+          },
+          {
+            "base": "peinar",
+            "with_se": "peinarse",
+            "base_meaning_en": "to comb (someone/something)",
+            "se_meaning_en": "to comb one’s hair"
+          }
+        ]
+      },
+      {
+        "heading": "PRONOMINAL_SEED (mostly lexical / meaning-shifting ‘se’ verbs)",
+        "points": [
+          "The ‘se’ form often behaves like a different lexical verb (meaning shift, nuance change, or the more natural/common form).",
+          "‘se’ is not simply ‘myself/yourself’; it can mark departure, change of state, idiomatic meanings, or other nuances.",
+          "Useful for contrast drills because base vs pronominal forms can differ substantially."
+        ],
+        "examples": [
+          {
+            "base": "ir",
+            "with_se": "irse",
+            "base_meaning_en": "to go",
+            "se_meaning_en": "to leave / go away"
+          },
+          {
+            "base": "dormir",
+            "with_se": "dormirse",
+            "base_meaning_en": "to sleep",
+            "se_meaning_en": "to fall asleep"
+          },
+          {
+            "base": "poner",
+            "with_se": "ponerse",
+            "base_meaning_en": "to put",
+            "se_meaning_en": "to put on / to become (get)"
+          },
+          {
+            "base": "volver",
+            "with_se": "volverse",
+            "base_meaning_en": "to return",
+            "se_meaning_en": "to become (often permanent change)"
+          },
+          {
+            "base": "perder",
+            "with_se": "perderse",
+            "base_meaning_en": "to lose (something)",
+            "se_meaning_en": "to get lost / to miss (an event)"
+          },
+          {
+            "base": "hacer",
+            "with_se": "hacerse",
+            "base_meaning_en": "to do/make",
+            "se_meaning_en": "to become / make oneself"
+          }
+        ]
+      },
+      {
+        "heading": "Quick diagnostic rule",
+        "rule": "If you can paraphrase the ‘se’ meaning as ‘a sí mismo/a’ (to oneself) without changing meaning much, it’s often reflexive. If not, it’s often pronominal/lexical.",
+        "mini_examples": [
+          {
+            "spanish": "Me lavo.",
+            "paraphrase": "Lavo a mí mismo.",
+            "note": "reflexive (self-directed)"
+          },
+          {
+            "spanish": "Me voy.",
+            "paraphrase": "Voy a mí mismo.",
+            "note": "not equivalent → pronominal (meaning shift: ‘leave’)"
+          },
+          {
+            "spanish": "Se durmió.",
+            "paraphrase": "Durmió a sí mismo.",
+            "note": "not equivalent → pronominal (meaning shift: ‘fall asleep’)"
+          }
+        ]
+      },
+      {
+        "heading": "Important nuance",
+        "points": [
+          "Some verbs can be reflexive in one context and pronominal/lexical in another; classification is a learning aid, not a perfect linguistic taxonomy.",
+          "Many verbs allow both transitive and reflexive/intransitive uses (e.g., sentar vs sentarse)."
+        ],
+        "examples": [
+          {
+            "spanish": "Siento al niño.",
+            "en": "I sit the child down.",
+            "type": "transitive base"
+          },
+          {
+            "spanish": "Me siento.",
+            "en": "I sit down.",
+            "type": "reflexive/intransitive"
+          }
+        ]
+      }
+    ]
+  },
+  "templates": {
+    "REFLEXIVE_PLACEMENT_CORE": {
+      "name": "Reflexive / se placement drill",
+      "prompt": [
+        "You are the 'Spanish Radix' engine (v1). Execute the following task strictly.",
+        "",
+        "**Global Constraints & Safety Rules:**",
+        "1. **Consistency (A–D):** Use the SAME subject and SAME non-verb vocabulary across all sentences in Sections A–D. Vary ONLY the verb tense/mood and clitic placement rules required by the structure.",
+        "2. **Highlighting:** Highlight the CLITIC + VERB in **ALL CAPS** in ALL sections (e.g., \"SE HACE\", \"HACERSE\", \"HACIÉNDOSE\", \"HÁZTE\", \"NO TE HAGAS\").",
+        "3. **Time/Tense Agreement:** If you use time expressions (hoy/ayer/mañana), they must match the verb tense (present/past/future).",
+        "4. **Subjunctive Licensing:** For Section E, use subjunctive ONLY with valid triggers (querer que, dudar que, es posible que, recomendar que, etc.).",
+        "5. **Semantic Validity (Critical):** Avoid sentences that are morphologically correct but conceptually unnatural in Spanish. In particular:",
+        "   - Do NOT pair time expressions with situations that imply an unrealistic instantaneous change (e.g., becoming an expert “ayer” without a plausible frame).",
+        "   - If the target meaning typically implies a gradual process, prefer neutral time frames (hoy/mañana) or choose a complement/context that makes the change plausible.",
+        "   - Ensure number/person agreement and conceptual naturalness for imperatives (e.g., avoid “nosotros” + singular predicate that sounds unnatural; if needed, choose vocabulary that works for all required persons).",
+        "",
+        "**Task:** REFLEXIVE_PLACEMENT_CORE",
+        "**Target Verb:** {infinitive}",
+        "**Pronominal Form:** {pronominal_infinitive}",
+        "**Meaning Shift:** {meaning_shift}",
+        "",
+        "**Step 1: Explain Rules**",
+        "Briefly explain clitic placement for:",
+        "- Conjugated verbs (finite): clitic BEFORE the verb.",
+        "- Infinitives: clitic ATTACHED to the infinitive (and mention the alternative of pre-verbal placement only if structure permits).",
+        "- Gerunds: clitic ATTACHED to the gerund (and mention the alternative of pre-verbal placement only if structure permits).",
+        "- Imperatives: Positive = attached; Negative = before the verb.",
+        "",
+        "**Step 2: Generate Sections (5 sentences each)**",
+        "",
+        "* **Section A: Indicative (Clitic before conjugated verb)**",
+        "  - Vary tenses (Present, Preterite, Future, etc.).",
+        "  - Format: Spanish (English)",
+        "",
+        "* **Section B: Infinitive (Attached clitic)**",
+        "  - Structure: conjugated verb + infinitive WITH clitic attached.",
+        "",
+        "* **Section C: Gerund (Attached clitic)**",
+        "  - Structure: estar + gerund WITH clitic attached.",
+        "",
+        "* **Section D: Imperatives**",
+        "  - Mix Positive (attached) and Negative (clitic before verb).",
+        "  - Keep vocabulary consistent; ensure agreement and naturalness.",
+        "",
+        "* **Section E: Subjunctive**",
+        "  - Structure: [Trigger] + que + [Different Subject] + [Clitic] + [Subjunctive Verb].",
+        "  - Note: Subject must change from trigger to clause.",
+        "  - Only use licensed subjunctive triggers.",
+        "",
+        "**Step 3: Drill**",
+        "Provide 10 fill-in-the-blank sentences mixing all structures above + Answer Key.",
+        "- Apply the SAME highlighting rule.",
+        "- Strictly avoid semantically unnatural items (even if grammatically correct).",
+        "- Do not include “edge-case” drills that require extra context to sound natural."
+      ]
+    },
+    "PRONOMINAL_CONTRAST_PAIR": {
+      "name": "Base vs pronominal contrast",
+      "prompt": [
+        "You are the 'Spanish Radix' engine (v1). Execute the following task strictly.",
+        "",
+        "**Global Constraints:**",
+        "1. **Highlighting:** Highlight the target VERB in **ALL CAPS**.",
+        "2. **Clarity:** Ensure the English translation clearly reflects the specific meaning difference.",
+        "3. **Double-SE Guard:** If the provided {pronominal_infinitive} already ends in 'se', treat {infinitive} as the base. Do NOT generate forms with double-se (e.g. 'hacersese').",
+        "4. **Semantic Purity (Crucial):**",
+        "   - **Shared Context:** Sentence A and B must share the same topic or semantic ground. Do not contrast unrelated idioms (e.g. 'Hace frío' vs 'Se hace tarde').",
+        "   - **Predicate Consistency:** Do not switch the object entirely just to find a match. If A is 'He makes the report', B should be 'He takes responsibility for the report' or 'The report is made', rather than 'He becomes a doctor'.",
+        "   - **Logic:** Where possible, contrast *Causation* (A) vs *Change of State/Result* (B). Example: 'He makes the process hard' vs 'The process becomes hard'.",
+        "",
+        "**Task:** PRONOMINAL_CONTRAST_PAIR",
+        "**Base Verb:** {infinitive}",
+        "**Pronominal Form:** {pronominal_infinitive}",
+        "**Meaning Shift:** {meaning_shift}",
+        "",
+        "**Step 1: Explanation**",
+        "Explain the semantic contrast in 4–5 lines. Focus on the shift in meaning or nuance caused by the clitic.",
+        "",
+        "**Step 2: Contrast Pairs (12 Total)**",
+        "Generate 12 pairs of sentences. In each pair:",
+        "* **Sentence A:** Uses the Base Verb ({infinitive}).",
+        "* **Sentence B:** Uses the Pronominal Verb ({pronominal_infinitive}).",
+        "* Both sentences should share context where possible to highlight the difference.",
+        "",
+        "**Distribution Requirements:**",
+        "* **6 Pairs:** Present Tense",
+        "* **3 Pairs:** Past Tense (Preterite vs Imperfect where natural)",
+        "* **3 Pairs:** Future or \"Ir a + inf\"",
+        "",
+        "**Step 3: Decision Drill**",
+        "Create 10 short scenarios/sentences with a blank.",
+        "* The user must decide between the Base or Pronominal form.",
+        "* Provide the Answer Key with a one-line explanation for each."
+      ]
+    },
+    "ACCIDENTAL_DATIVE_SE_CORE": {
+      "name": "Accidental / dative se drill",
+      "prompt": [
+        "You are the 'Spanish Radix' engine (v1). Execute the following task strictly.",
+        "",
+        "**Target pattern:** accidental/dative SE",
+        "**Target verb:** {pronominal_infinitive}",
+        "**Base verb:** {infinitive}",
+        "**Level:** A2–B1",
+        "",
+        "**Step 1: Explain the pattern briefly**",
+        "- Structure: SE + IO clitic (me/te/le/nos/os/les) + 3rd-person verb",
+        "- Meaning: unintended event affecting someone, lack of control.",
+        "",
+        "**Step 2: Generate 20 short sentences (Spanish + English)**",
+        "- Use only one IO clitic per sentence (rotate me/te/le/nos/os/les).",
+        "- **Global Constraint:** Highlight SE + IO CLITIC + VERB in **ALL CAPS** (e.g. \"SE ME CAYÓ\").",
+        "- Keep vocabulary simple and relevant to the verb's meaning ({meaning_shift}).",
+        "",
+        "**Step 3: Drill**",
+        "- 10 fill-in-the-blank sentences (focus on the 'se + io' cluster).",
+        "- Provide answer key."
+      ]
+    },
+    "ACCIDENTAL_VS_INTENTIONAL_CONTRAST": {
+      "name": "Accidental (se me...) vs intentional",
+      "prompt": [
+        "You are the 'Spanish Radix' engine (v1). Execute the following task strictly.",
+        "",
+        "**Teach the contrast:**",
+        "A) Intentional action (Base verb: {infinitive})",
+        "B) Accidental outcome (Accidental Se: {pronominal_infinitive})",
+        "",
+        "**Step 1: Explain the meaning difference**",
+        "Explain in 4–5 simple lines how the syntax changes the meaning from \"I did X\" to \"X happened to me\".",
+        "",
+        "**Step 2: Provide 12 contrast pairs**",
+        "- Share the object/context where possible.",
+        "- **Sentence A:** Intentional (Active voice, normal subject).",
+        "- **Sentence B:** Accidental (Se + IO construction).",
+        "- Format: Spanish + English.",
+        "- **Highlight the verb phrase in ALL CAPS**.",
+        "",
+        "**Step 3: Decision Drill**",
+        "- 10 situations where the user must choose between the intentional or accidental construction.",
+        "- Provide answers + one-line explanation."
+      ]
+    },
+    "GUSTAR_EXPERIENCER_DRILL": {
+      "name": "Gustar-like (Experiencer) drill",
+      "prompt": [
+        "You are the 'Spanish Radix' engine (v1).",
+        "",
+        "**Target Pattern:** Psychological/Experiencer Verbs (Verbs like Gustar)",
+        "**Target Verb:** {infinitive}",
+        "**Pattern:** Indirect Object (Experiencer) + Verb (3rd Person) + Subject (Theme).",
+        "",
+        "**Step 1: Explanation**",
+        "Explain that in this structure, the \"subject\" (grammatically) is what pleases/bores/hurts, and the person feeling it is marked by an Indirect Object pronoun (me/te/le/nos/os/les).",
+        "",
+        "**Step 2: Conjugation Table (Specific)**",
+        "Show a grid for the PRESENT tense of {infinitive} in this structure:",
+        "- A mí me ...",
+        "- A ti te ...",
+        "- A él/ella le ...",
+        "- A nosotros nos ...",
+        "- A vosotros os ...",
+        "- A ellos les ...",
+        "*(Include singular and plural verb forms: e.g., 'gusta' vs 'gustan')*",
+        "",
+        "**Step 3: Sentence Generation (12 sentences)**",
+        "Generate sentences mixing different tenses (Present, Preterite, Imperfect, Conditional).",
+        "- Rotate the experiencer (Me, Te, Le, Nos, Les).",
+        "- **Constraint:** Highlight the IO PRONOUN + VERB in **ALL CAPS** (e.g., \"ME GUSTA\", \"LE DOLÍA\").",
+        "- Include questions (e.g., \"¿Te interesa...?\").",
+        "",
+        "**Step 4: Drill**",
+        "Provide 10 fill-in-the-blank items where the user must supply the correct Indirect Object Pronoun and/or the correct Verb Form based on the subject."
+      ]
+    },
+    "STANDARD_VERB_DRILL": {
+      "name": "Standard conjugation & usage",
+      "prompt": [
+        "You are the 'Spanish Radix' engine (v1).",
+        "",
+        "**Global Constraints:**",
+        "1. **Highlighting:** Highlight the target VERB in **ALL CAPS**.",
+        "2. **Accuracy:** Ensure strict tense agreement and correct conjugations.",
+        "",
+        "**Task:** STANDARD_VERB_DRILL",
+        "**Target Verb:** {infinitive}",
+        "**Meaning:** {meaning_shift}",
+        "",
+        "**Step 1: Conjugation Overview**",
+        "List the Present, Preterite, and Imperfect forms for 'Yo', 'Tú', and 'Nosotros'.",
+        "Mark any irregularities clearly.",
+        "",
+        "**Step 2: Sentence Generation (10 total)**",
+        "Generate 10 sentences across different tenses (Indicative & Subjunctive).",
+        "* Contextualize the meaning clearly.",
+        "* Spanish + English translation.",
+        "",
+        "**Step 3: Drill**",
+        "Provide 5 fill-in-the-blank exercises focusing on correct conjugation choice."
+      ]
+    }
+  }
+}
