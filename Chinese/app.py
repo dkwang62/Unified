@@ -28,7 +28,6 @@ from radix_ui import (
     render_copy_to_clipboard, get_stroke_order_sidebar_html,
     render_learning_insights_html
 )
-from radix_persistence import PersistenceManager
 from server import create_editable_copy, save_json_copy, build_download_payload
 
 
@@ -39,7 +38,6 @@ apply_styles()
 # Initialize managers
 state = StateManager()
 config = ConfigManager(state)
-persistence = PersistenceManager(state)
 DEFAULT_COMPONENT_MAP_FILE = "enhanced_component_map_with_etymology.json"
 
 
@@ -685,12 +683,7 @@ def render_sidebar():
         
         st.markdown("---")
         
-        # 4. Persistence Controls
-        persistence.render_controls()
-        
-        st.markdown("---")
-        
-        # 5. User Data (Manual Upload/Download)
+        # 4. User Data (Manual Upload/Download)
         with st.expander("💾 User Data", expanded=False):
             st.info(f"💡 {PROFILE_FILENAME} auto-loads on startup if present in the app directory")
             st.markdown(render_ipad_safe_download_html(config.export_profile_str(), PROFILE_FILENAME, "📥 Download Profile"), unsafe_allow_html=True)
@@ -711,9 +704,6 @@ def render_sidebar():
 
 def render_grid():
     """Render the main grid view with tabs."""
-    # Show resume button if localStorage has saved session
-    persistence.show_resume_option()
-    
     tab1, tab2, tab3 = st.tabs(["🔍 Smart Search", "📊 Filter", "⭐ Favourites"])
     
     with tab1:
@@ -728,22 +718,36 @@ def render_grid():
 def render_smart_search(key_prefix: str = "", on_pick=None, collapse_after_pick: bool = False):
     """Render the combined Fuzzy Pinyin + Meaning search tab."""
     selected_key = f"{key_prefix}selected_char"
+    input_key = f"{key_prefix}smart_search_input"
+    committed_key = f"{key_prefix}smart_search_committed"
+
+    if committed_key not in st.session_state:
+        st.session_state[committed_key] = ""
+
     if collapse_after_pick and st.session_state.get(selected_key):
         chosen = st.session_state.get(selected_key)
         st.success(f"Selected character: {chosen}")
         if st.button("Change character", key=f"{key_prefix}change_char", use_container_width=False):
             st.session_state[selected_key] = ""
-            st.session_state[f"{key_prefix}smart_search_input"] = ""
+            st.session_state[input_key] = ""
+            st.session_state[committed_key] = ""
             st.rerun()
         return
 
     st.info("💡 Search by **Character** (e.g., '水'), **Phrase** (e.g., '你好'), **Pinyin** (e.g., 'ma' or 'tan lan'), OR **English Meaning** (e.g., 'fire'). Results show pinyin matches first, then English matches.")
-    
-    query = st.text_input(
-        "Enter Character, Phrase, Pinyin or Meaning",
-        key=f"{key_prefix}smart_search_input",
-        placeholder="e.g. 水, 你好, tan lan, ma, horse, water",
-    )
+
+    with st.form(key=f"{key_prefix}smart_search_form", clear_on_submit=False):
+        st.text_input(
+            "Enter Character, Phrase, Pinyin or Meaning",
+            key=input_key,
+            placeholder="e.g. 水, 你好, tan lan, ma, horse, water",
+        )
+        submitted = st.form_submit_button("Search", use_container_width=False)
+
+    if submitted:
+        st.session_state[committed_key] = st.session_state.get(input_key, "").strip()
+
+    query = st.session_state.get(committed_key, "")
 
     if query:
         query = query.strip()
@@ -1270,12 +1274,8 @@ def main():
     # AUTO-LOAD user data file if present (NEW!)
     auto_load_user_data()
 
-    # Restore from URL
-    persistence.try_restore()
-
     # Layout
     render_sidebar()
-    persistence.add_heartbeat()
 
     # Routing
     if state.get("dataset_editor_mode", False):
@@ -1289,8 +1289,5 @@ def main():
     else:
         render_lineage()
     
-    # Auto-save
-    persistence.auto_save()
-
 if __name__ == "__main__":
     main()
