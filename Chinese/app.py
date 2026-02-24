@@ -736,16 +736,16 @@ def render_smart_search(key_prefix: str = "", on_pick=None, collapse_after_pick:
 
     st.info("💡 Search by **Character** (e.g., '水'), **Phrase** (e.g., '你好'), **Pinyin** (e.g., 'ma' or 'tan lan'), OR **English Meaning** (e.g., 'fire'). Results show pinyin matches first, then English matches.")
 
-    with st.form(key=f"{key_prefix}smart_search_form", clear_on_submit=False):
-        st.text_input(
-            "Enter Character, Phrase, Pinyin or Meaning",
-            key=input_key,
-            placeholder="e.g. 水, 你好, tan lan, ma, horse, water",
-        )
-        submitted = st.form_submit_button("Search", use_container_width=False)
+    current_query = st.text_input(
+        "Enter Character, Phrase, Pinyin or Meaning",
+        key=input_key,
+        placeholder="e.g. 水, 你好, tan lan, ma, horse, water",
+    )
+    st.button("Search", key=f"{key_prefix}smart_search_btn", use_container_width=False)
 
-    if submitted:
-        st.session_state[committed_key] = st.session_state.get(input_key, "").strip()
+    # Keep committed query synced with the latest input value so IME-composed
+    # Chinese characters are not one event behind button/form submission.
+    st.session_state[committed_key] = (current_query or "").strip()
 
     query = st.session_state.get(committed_key, "")
 
